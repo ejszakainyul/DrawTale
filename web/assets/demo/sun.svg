@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="240" viewBox="0 0 240 240"><defs><filter id="c" x="-8%" y="-8%" width="116%" height="116%">
+<feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="4" result="n"/>
+<feDisplacementMap in="SourceGraphic" in2="n" scale="7" xChannelSelector="R" yChannelSelector="G" result="d"/>
+<feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="1" seed="9" result="g"/>
+<feColorMatrix in="g" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1.6 1.45" result="ga"/>
+<feComposite in="d" in2="ga" operator="in"/>
+</filter></defs><g filter="url(#c)" stroke-linecap="round" stroke-linejoin="round">
+    <g stroke="#f2a516" stroke-width="12">
+      <path d="M120 14 L120 44 M120 196 L120 226 M14 120 L44 120 M196 120 L226 120 M45 45 L66 66 M174 174 L195 195 M195 45 L174 66 M66 174 L45 195"/>
+    </g>
+    <circle cx="120" cy="120" r="62" fill="#ffd23f" stroke="#f2a516" stroke-width="10"/>
+    <circle cx="100" cy="110" r="7" fill="#2b2b33"/><circle cx="140" cy="110" r="7" fill="#2b2b33"/>
+    <path d="M96 138 Q120 158 144 138" fill="none" stroke="#2b2b33" stroke-width="6"/></g></svg>

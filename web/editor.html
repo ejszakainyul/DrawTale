@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="hu">
+<head>
+  <title>Mese szerkesztése – DrawTale</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#2f6fde">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect x='3' y='7' width='34' height='36' rx='5' fill='%23fffdf8' stroke='%232b2b33' stroke-width='3'/%3E%3Cpath d='M33 40 L44 9 L47 10 L36 41 L32 44 Z' fill='%23ff8a3d' stroke='%232b2b33' stroke-width='2.5'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Andika:wght@400;700&family=Baloo+2:wght@600;800&family=Nunito:wght@400;700;800&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/config.js"></script>
+  <script src="js/core/anim.js" defer></script>
+  <script src="js/player.js" defer></script>
+  <script src="js/api.js" defer></script>
+  <script src="js/mock/seed.js" defer></script>
+  <script src="js/mock/cutout.js" defer></script>
+  <script src="js/mock/server.js" defer></script>
+  <script src="js/ui.js" defer></script>
+  <script src="js/pages/editor.js" defer></script>
+</head>
+<body>
+  <main>
+    <div class="wrap">
+      <div class="page-head">
+        <div class="grow">
+          <a href="dashboard.html" class="small">← Mesepolc</a>
+          <label for="story-title" class="sr-only">A mese címe</label>
+          <input id="story-title" class="input" maxlength="120" style="font: 800 clamp(1.5rem,3.6vw,2.2rem) var(--font-head); border-color: transparent; background: transparent; padding-left: 4px; margin-top: 4px">
+        </div>
+        <div class="row">
+          <span class="save-state" id="save-state" role="status" aria-live="polite"></span>
+          <a class="btn" id="play-link" href="#">▶ Lejátszás</a>
+          <a class="btn btn-ghost" id="share-link" href="#">🔗 Megosztás</a>
+        </div>
+      </div>
+      <div class="editor">
+        <aside aria-label="Oldalak">
+          <div class="page-list" id="page-list"></div>
+          <button class="btn" id="add-page" type="button" style="width:100%;margin-top:10px">＋ Új oldal</button>
+          <p class="small muted" style="margin-top:10px">Tipp: húzd az oldalakat, vagy használd a ▲▼ gombokat a sorrendhez.</p>
+        </aside>
+        <section id="page-editor" class="card" aria-live="polite"></section>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

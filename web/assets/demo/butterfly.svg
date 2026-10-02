@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="150" height="120" viewBox="0 0 150 120"><defs><filter id="c" x="-8%" y="-8%" width="116%" height="116%">
+<feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="6" result="n"/>
+<feDisplacementMap in="SourceGraphic" in2="n" scale="7" xChannelSelector="R" yChannelSelector="G" result="d"/>
+<feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="1" seed="11" result="g"/>
+<feColorMatrix in="g" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1.6 1.45" result="ga"/>
+<feComposite in="d" in2="ga" operator="in"/>
+</filter></defs><g filter="url(#c)" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M75 60 C 40 0, 4 20, 20 58 C 0 90, 40 112, 75 70 Z" fill="#ff7bbd" stroke="#c43d86" stroke-width="7"/>
+    <path d="M75 60 C 110 0, 146 20, 130 58 C 150 90, 110 112, 75 70 Z" fill="#9b7bff" stroke="#5b3fc4" stroke-width="7"/>
+    <circle cx="40" cy="52" r="8" fill="#fff59a"/><circle cx="110" cy="52" r="8" fill="#fff59a"/>
+    <path d="M75 30 L75 98" stroke="#2b2b33" stroke-width="9"/>
+    <path d="M75 32 Q66 14 58 10 M75 32 Q84 14 92 10" fill="none" stroke="#2b2b33" stroke-width="4"/></g></svg>

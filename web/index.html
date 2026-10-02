@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="hu">
+<head>
+  <title>DrawTale – ahol a gyerekrajzok életre kelnek</title>
+  <meta name="description" content="A gyerek rajzol, a szülő lefotózza, és a rajzon lévő cica tényleg végigsétál a képernyőn – egy lapozható, megosztható animált mesekönyvben.">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#2f6fde">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect x='3' y='7' width='34' height='36' rx='5' fill='%23fffdf8' stroke='%232b2b33' stroke-width='3'/%3E%3Cpath d='M33 40 L44 9 L47 10 L36 41 L32 44 Z' fill='%23ff8a3d' stroke='%232b2b33' stroke-width='2.5'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Andika:wght@400;700&family=Baloo+2:wght@600;800&family=Nunito:wght@400;700;800&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/config.js"></script>
+  <script src="js/core/anim.js" defer></script>
+  <script src="js/player.js" defer></script>
+  <script src="js/api.js" defer></script>
+  <script src="js/mock/seed.js" defer></script>
+  <script src="js/mock/cutout.js" defer></script>
+  <script src="js/mock/server.js" defer></script>
+  <script src="js/ui.js" defer></script>
+  <script src="js/pages/home.js" defer></script>
+</head>
+<body>
+  <main>
+    <div class="wrap">
+      <section class="hero">
+        <div>
+          <h1>Ahol a gyerekrajzok <span class="hl">életre kelnek</span></h1>
+          <p class="lead">A gyerek rajzol egy képet papírra, a szülő lefotózza, és pár perc múlva a rajzon lévő cica tényleg végigsétál a képernyőn – a közösen kitalált mese oldalain.</p>
+          <div class="row" id="hero-actions">
+            <a class="btn btn-accent btn-big" href="register.html"><span class="ico">✏️</span> Kezdjük el!</a>
+            <a class="btn btn-big" href="login.html">Belépés</a>
+          </div>
+          <p class="small muted" style="margin-top:14px">Ingyenes · Reklám nélkül · A gyerek alkot, nem a gép</p>
+        </div>
+        <figure class="hero-demo" style="margin:0">
+          <div class="frame">
+            <span class="tape" aria-hidden="true"></span>
+            <canvas id="demo" role="img" aria-label="Példa: egy gyerekrajzon lévő cica sétál, a nap lüktet, a pillangó repül"></canvas>
+          </div>
+          <figcaption class="caption">„Volt egyszer egy szürke cica, akit Cirmosnak hívtak…” – Bence (6) rajza</figcaption>
+          <div class="presets" id="demo-presets" style="margin-top:12px" aria-label="Próbáld ki: mit csináljon a cica?">
+            <span class="label small" style="align-self:center;margin-right:4px">Mit csináljon a cica?</span>
+          </div>
+        </figure>
+      </section>
+
+      <section class="section" aria-labelledby="how">
+        <h2 id="how">Hogyan működik?</h2>
+        <div class="steps">
+          <div class="step"><span class="emoji" aria-hidden="true">🖍️</span><div class="num">1</div><h3>Rajzolás és fotó</h3><p>A gyerek papírra rajzol, a szülő lefotózza a telefonjával.</p></div>
+          <div class="step"><span class="emoji" aria-hidden="true">✂️</span><div class="num">2</div><h3>Kivágás</h3><p>A szerver a háttérben kivágja a figurákat a papírról.</p></div>
+          <div class="step"><span class="emoji" aria-hidden="true">🤔</span><div class="num">3</div><h3>Mi mozogjon?</h3><p>Közösen eldöntitek, mi mozogjon és mi maradjon háttér.</p></div>
+          <div class="step"><span class="emoji" aria-hidden="true">✨</span><div class="num">4</div><h3>Életre kel!</h3><p>Egy gombnyomás, és a figurák ugrálnak, sétálnak, repülnek.</p></div>
+          <div class="step"><span class="emoji" aria-hidden="true">📖</span><div class="num">5</div><h3>Lapozd és oszd meg</h3><p>Lapozós mesekönyv, amit a nagyi is megnézhet egy linkkel.</p></div>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="why">
+        <h2 id="why">Miért jó?</h2>
+        <div class="feature-list">
+          <div class="feature"><span class="ico" aria-hidden="true">🧒</span><div><h3>A gyereknek</h3><p class="muted">A saját rajza mozog – ettől kedve lesz rajzolni és mesélni.</p></div></div>
+          <div class="feature"><span class="ico" aria-hidden="true">👨‍👩‍👧</span><div><h3>A szülőnek</h3><p class="muted">Közös alkotás passzív képernyőzés helyett, és egy emlék, ami megmarad.</p></div></div>
+          <div class="feature"><span class="ico" aria-hidden="true">👵</span><div><h3>A nagyszülőknek</h3><p class="muted">Egy kattintás a linkre, regisztráció nélkül nézhetik a mesét.</p></div></div>
+          <div class="feature"><span class="ico" aria-hidden="true">🔒</span><div><h3>Biztonságos</h3><p class="muted">Alapból minden privát. Csak becenevet kérünk, valódi nevet nem.</p></div></div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="cta">
+          <h2>Készítsétek el az első mesét még ma!</h2>
+          <p>Egy papír, egy filc, egy telefon – ennyi kell.</p>
+          <a class="btn btn-accent btn-big" href="register.html">Regisztrálok</a>
+        </div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>
