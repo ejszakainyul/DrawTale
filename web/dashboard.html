@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="hu">
+<head>
+  <title>Meséim – DrawTale</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#2f6fde">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect x='3' y='7' width='34' height='36' rx='5' fill='%23fffdf8' stroke='%232b2b33' stroke-width='3'/%3E%3Cpath d='M33 40 L44 9 L47 10 L36 41 L32 44 Z' fill='%23ff8a3d' stroke='%232b2b33' stroke-width='2.5'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Andika:wght@400;700&family=Baloo+2:wght@600;800&family=Nunito:wght@400;700;800&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/config.js"></script>
+  <script src="js/core/anim.js" defer></script>
+  <script src="js/player.js" defer></script>
+  <script src="js/api.js" defer></script>
+  <script src="js/mock/seed.js" defer></script>
+  <script src="js/mock/cutout.js" defer></script>
+  <script src="js/mock/server.js" defer></script>
+  <script src="js/ui.js" defer></script>
+  <script src="js/pages/dashboard.js" defer></script>
+</head>
+<body>
+  <main>
+    <div class="wrap">
+      <div class="page-head">
+        <div>
+          <p class="muted" id="hello" style="margin:0"></p>
+          <h1>Mesepolc</h1>
+        </div>
+        <button class="btn btn-accent btn-big" id="new-story" type="button"><span class="ico">＋</span> Új mese</button>
+      </div>
+      <div class="kids" id="kids" role="group" aria-label="Kinek a meséi?"></div>
+      <div id="stories" class="grid" aria-live="polite"></div>
+    </div>
+  </main>
+</body>
+</html>

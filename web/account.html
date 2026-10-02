@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="hu">
+<head>
+  <title>Fiókom – DrawTale</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#2f6fde">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect x='3' y='7' width='34' height='36' rx='5' fill='%23fffdf8' stroke='%232b2b33' stroke-width='3'/%3E%3Cpath d='M33 40 L44 9 L47 10 L36 41 L32 44 Z' fill='%23ff8a3d' stroke='%232b2b33' stroke-width='2.5'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Andika:wght@400;700&family=Baloo+2:wght@600;800&family=Nunito:wght@400;700;800&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/config.js"></script>
+  <script src="js/core/anim.js" defer></script>
+  <script src="js/player.js" defer></script>
+  <script src="js/api.js" defer></script>
+  <script src="js/mock/seed.js" defer></script>
+  <script src="js/mock/cutout.js" defer></script>
+  <script src="js/mock/server.js" defer></script>
+  <script src="js/ui.js" defer></script>
+  <script src="js/pages/account.js" defer></script>
+</head>
+<body>
+  <main>
+    <div class="wrap stack" style="max-width:820px">
+      <div class="page-head"><h1>Fiókom</h1></div>
+
+      <section class="card" aria-labelledby="t-profile">
+        <h2 id="t-profile">Adataim</h2>
+        <form class="form" id="profile-form">
+          <div class="field"><label for="email">E-mail cím</label><input class="input" id="email" disabled></div>
+          <div class="field"><label for="display_name">Megjelenített név</label><input class="input" id="display_name" name="display_name" maxlength="80"></div>
+          <div><button class="btn btn-primary" type="submit">Mentés</button></div>
+        </form>
+      </section>
+
+      <section class="card" aria-labelledby="t-kids">
+        <h2 id="t-kids">Gyerekprofilok</h2>
+        <p class="muted small">Csak becenevet és avatart tárolunk.</p>
+        <div id="kids" class="stack"></div>
+      </section>
+
+      <section class="card" aria-labelledby="t-pw">
+        <h2 id="t-pw">Jelszócsere</h2>
+        <form class="form" id="pw-form" novalidate>
+          <div class="field"><label for="current_password">Jelenlegi jelszó</label><input class="input" type="password" id="current_password" name="current_password" autocomplete="current-password"><span class="err"></span></div>
+          <div class="field"><label for="password">Új jelszó</label><input class="input" type="password" id="password" name="password" autocomplete="new-password" minlength="8"><span class="hint">Legalább 8 karakter.</span><span class="err"></span></div>
+          <div><button class="btn btn-primary" type="submit">Jelszó módosítása</button></div>
+        </form>
+      </section>
+
+      <section class="card" aria-labelledby="t-del" style="border-color:#f2b9b9">
+        <h2 id="t-del">Fiók törlése</h2>
+        <p>Minden mese, rajz és megosztás törlődik, a linkek azonnal megszűnnek, és minden eszközön kiléptetünk. 30 napig még kérheted a visszaállítást, utána minden végleg eltűnik.</p>
+        <button class="btn btn-danger" type="button" id="delete-account">Fiók és minden adat törlése…</button>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

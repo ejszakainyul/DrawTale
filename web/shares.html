@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="hu">
+<head>
+  <title>Megosztások – DrawTale</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#2f6fde">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect x='3' y='7' width='34' height='36' rx='5' fill='%23fffdf8' stroke='%232b2b33' stroke-width='3'/%3E%3Cpath d='M33 40 L44 9 L47 10 L36 41 L32 44 Z' fill='%23ff8a3d' stroke='%232b2b33' stroke-width='2.5'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Andika:wght@400;700&family=Baloo+2:wght@600;800&family=Nunito:wght@400;700;800&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/config.js"></script>
+  <script src="js/core/anim.js" defer></script>
+  <script src="js/player.js" defer></script>
+  <script src="js/api.js" defer></script>
+  <script src="js/mock/seed.js" defer></script>
+  <script src="js/mock/cutout.js" defer></script>
+  <script src="js/mock/server.js" defer></script>
+  <script src="js/ui.js" defer></script>
+  <script src="vendor/qrcode.js" defer></script>
+  <script src="js/pages/shares.js" defer></script>
+</head>
+<body>
+  <main>
+    <div class="wrap stack">
+      <div class="page-head"><h1>Megosztások</h1></div>
+      <section class="card" aria-labelledby="new-title">
+        <h2 id="new-title">Új megosztási link</h2>
+        <p class="muted">Aki megkapja a linket, regisztráció nélkül megnézheti a mesét – de semmi mást. Bármikor visszavonhatod.</p>
+        <form class="form" id="share-form">
+          <div class="field">
+            <label for="story">Melyik mesét?</label>
+            <select class="select" id="story" name="story" required></select>
+          </div>
+          <fieldset class="field" style="border:0;padding:0;margin:0">
+            <legend class="label" style="margin-bottom:6px">Meddig legyen érvényes?</legend>
+            <div class="choice">
+              <label><input type="radio" name="exp" value="7"> 7 nap</label>
+              <label><input type="radio" name="exp" value="30" checked> 30 nap</label>
+              <label><input type="radio" name="exp" value=""> Amíg vissza nem vonom</label>
+            </div>
+          </fieldset>
+          <div><button class="btn btn-accent btn-big" type="submit" disabled>🔗 Link készítése</button></div>
+        </form>
+        <div id="share-result" style="margin-top:20px"></div>
+      </section>
+      <section class="card" aria-labelledby="list-title">
+        <h2 id="list-title">Eddigi megosztások</h2>
+        <div id="share-list" class="table-scroll"></div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

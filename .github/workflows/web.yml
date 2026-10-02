@@ -1,0 +1,22 @@
+name: web
+
+on:
+  push:
+    paths: ['web/**', 'tests/web/**', '.github/workflows/web.yml']
+  pull_request:
+    paths: ['web/**', 'tests/web/**', '.github/workflows/web.yml']
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Animáció mag – egységtesztek
+        run: node --test tests/web/anim.test.js
+      - name: Playwright telepítése
+        run: npm install --no-save playwright && npx playwright install --with-deps chromium
+      - name: Böngészős végigkattintás
+        run: node tests/web/e2e.js
